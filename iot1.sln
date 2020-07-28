@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iot1", "iot1\iot1.csproj", "{5F9DE71D-9D81-4CB0-AF85-8722E04B894A}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BDE0BD13-9A7B-4DCB-B0EC-808FA950DE4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F9DE71D-9D81-4CB0-AF85-8722E04B894A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F9DE71D-9D81-4CB0-AF85-8722E04B894A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F9DE71D-9D81-4CB0-AF85-8722E04B894A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F9DE71D-9D81-4CB0-AF85-8722E04B894A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE0BD13-9A7B-4DCB-B0EC-808FA950DE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE0BD13-9A7B-4DCB-B0EC-808FA950DE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE0BD13-9A7B-4DCB-B0EC-808FA950DE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE0BD13-9A7B-4DCB-B0EC-808FA950DE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
