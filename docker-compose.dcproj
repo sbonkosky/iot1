@@ -2,7 +2,7 @@
 <Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk" DefaultTargets="Build">
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
-    <DockerTargetOS>Windows</DockerTargetOS>
+    <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>{BDE0BD13-9A7B-4DCB-B0EC-808FA950DE4E}</ProjectGuid>
     <DockerLaunchBrowser>True</DockerLaunchBrowser>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
