@@ -5,9 +5,9 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
-COPY iot1/iot1.csproj iot1/
+COPY iot1.csproj iot1/
 RUN dotnet restore "iot1/iot1.csproj"
-COPY . .
+COPY . ./iot1
 WORKDIR "/src/iot1"
 RUN dotnet build "iot1.csproj" -c Release -o /app/build
 

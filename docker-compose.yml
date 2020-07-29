@@ -4,5 +4,5 @@ services:
   iot1:
     image: ${DOCKER_REGISTRY-}iot1
     build:
-      context: .
-      dockerfile: iot1/Dockerfile
+      context: ./iot1
+      dockerfile: Dockerfile
