@@ -28,3 +28,8 @@ docker build -t iot1:latest .
 
 to run (from DOCKERFILE):
 docker run  -p 5001:443 -v '/Users/steven/.aspnet/https:/root/.aspnet/https:ro' -v '/Users/steven/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro' -d iot1
+
+NODEJS
+followed this step by step
+https://nodejs.org/de/docs/guides/nodejs-docker-webapp/
+
