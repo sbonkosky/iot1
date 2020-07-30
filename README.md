@@ -21,7 +21,7 @@ ENV ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.aspnet/https/aspnetap
 VOLUME ["/root/.aspnet/https"]
 VOLUME ["/root/.microsoft/usersecrets"]
 
-and also docker run with volumes mounted
+and also docker run with volumes mounted (specified by -v option)
 
 to build (using DOCKERFILE)
 docker build -t iot1:latest .
