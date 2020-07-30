@@ -1,5 +1,8 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
+# use below to deploy to docker on raspberry pi
+#https://stackoverflow.com/questions/60158729/deploying-asp-net-core-docker-image-from-x86-to-arm-raspberry-pi-in-vs2019
+#FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim-arm32v7 AS base
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 
