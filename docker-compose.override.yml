@@ -4,9 +4,6 @@ services:
   iot1:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "5000:80"
-      - "5001:443"
     volumes:
       - ~/.aspnet/https:/root/.aspnet/https:ro
       - ~/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
