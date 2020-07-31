@@ -7,6 +7,9 @@ services:
     build:
       context: ./iot1
       dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+      - "5001:443"
   niot1:
     container_name: node
     image: ${DOCKER_REGISTRY-}niot1

@@ -33,3 +33,25 @@ NODEJS
 followed this step by step
 https://nodejs.org/de/docs/guides/nodejs-docker-webapp/
 
+NODE_SSL
+CORS added to node for cross-domain scripting stuff
+In order to get chrome not to shows warning screen, had to create an openssl.cnf file in directory, then create a self signed cert with the command:
+
+openssl req \
+    -newkey rsa:2048 \
+    -x509 \
+    -nodes \
+    -keyout server.key \
+    -new \
+    -out server.crt \
+    -subj /C=US/CN=localhost \
+    -reqexts SAN \
+    -extensions SAN \
+    -config <(cat /etc/ssl/openssl.cnf \
+        <(printf '[SAN]\nsubjectAltName=DNS:localhost')) \
+    -sha256 \
+    -days 800
+
+then get the decrypted keys
+
+openssl rsa -in server.key -out server.pem
