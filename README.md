@@ -41,6 +41,8 @@ https://stackoverflow.com/questions/42753566/nodejs-load-pfx-certificate-from-fi
 Need to make sure that the pfx created for the aspnet app is copied to niot1 directory
 
 CORS added to node for cross-domain scripting stuff
+
+(Below is if not using the pfx file)
 In order to get chrome not to shows warning screen, had to create an openssl.cnf file in directory, then create a self signed cert with the command:
 
 openssl req \
