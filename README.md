@@ -34,6 +34,12 @@ followed this step by step
 https://nodejs.org/de/docs/guides/nodejs-docker-webapp/
 
 NODE_SSL
+https://serverfault.com/questions/845766/generating-a-self-signed-cert-with-openssl-that-works-in-chrome-58
+https://medium.com/@nitinpatel_20236/how-to-create-an-https-server-on-localhost-using-express-366435d61f28
+https://stackoverflow.com/questions/42753566/nodejs-load-pfx-certificate-from-file
+
+Need to make sure that the pfx created for the aspnet app is copied to niot1 directory
+
 CORS added to node for cross-domain scripting stuff
 In order to get chrome not to shows warning screen, had to create an openssl.cnf file in directory, then create a self signed cert with the command:
 

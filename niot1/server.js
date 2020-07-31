@@ -1,25 +1,36 @@
 'use strict';
 
-const fs = require('fs');
-const key = fs.readFileSync('./server.pem');
-const cert = fs.readFileSync('./server.crt');
-
-const express = require('express');
-const https = require('https');
-var cors = require('cors');
-
 // Constants
 const PORT = 8080;
 const HOST = '0.0.0.0';
 
+const express = require('express');
+var cors = require('cors');
+const https = require('https');
+const fs = require('fs')
+    , path = require('path')
+    , pfxFile = path.resolve(__dirname, 'aspnetapp.pfx')
+    , request = require('request').defaults({rejectUnauthorized:false}); // use this to get rid of cert issues making calls to app:443
+const options = {
+  pfx: fs.readFileSync('aspnetapp.pfx'),
+  passphrase: 'localhost'
+};
+
 // App
 const app = express();
 app.use(cors());
-const server = https.createServer({key: key, cert: cert }, app);
+const server = https.createServer(options, app);
 
 app.get('/', (req, res) => {
-  res.json({data: "Hello World"});
+  var reqOptions = {
+      url: 'https://app:443/'
+  };
+  request(reqOptions, function (error, response, body) {
+    console.error('error:', error); // Print the error if one occurred
+    console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+    console.log('body:', body); // Print the HTML for the Google homepage.
+    return res.json({data: body});
+  });
 });
 
-//app.listen(PORT, HOST);
 server.listen(PORT, () => { console.log(`listening on ${PORT}`) });
